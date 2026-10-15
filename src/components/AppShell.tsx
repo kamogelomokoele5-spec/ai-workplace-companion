@@ -75,17 +75,11 @@ export function AppShell({ children }: { children: ReactNode }) {
         <header className="sticky top-0 z-30 flex items-center gap-3 border-b bg-background/85 px-4 py-2.5 backdrop-blur md:px-8">
           <button onClick={() => setMobile(true)} aria-label="Open menu" className="md:hidden"><Menu className="h-6 w-6" /></button>
           <span className="font-display text-lg md:hidden">Workplace Assistant</span>
+          <span className="hidden font-display text-lg md:inline">{current.label}</span>
           <Link
             to="/"
-            className="btn btn-ghost px-3 py-1.5 text-xs"
+            className="ml-auto inline-flex items-center gap-1.5 rounded-full bg-primary px-3.5 py-1.5 text-xs font-semibold text-primary-foreground transition-opacity hover:opacity-90"
             aria-label="Back to home"
-          >
-            <Home className="h-4 w-4" /> Home
-          </Link>
-          <span className="hidden text-xs text-muted-foreground sm:inline">/ {current.label}</span>
-          <Link
-            to="/"
-            className="ml-auto inline-flex items-center gap-1.5 rounded-full bg-primary px-3 py-1.5 text-xs font-semibold text-primary-foreground transition-opacity hover:opacity-90"
           >
             <Home className="h-3.5 w-3.5" /> <span className="hidden sm:inline">Back to home</span>
           </Link>
