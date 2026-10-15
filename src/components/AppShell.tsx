@@ -1,12 +1,13 @@
 import { Link, useRouterState } from "@tanstack/react-router";
 import { useState, type ReactNode } from "react";
-import { LayoutDashboard, CalendarCheck, BookOpenText, MessagesSquare, PanelLeftClose, PanelLeftOpen, Menu, X, Briefcase, Home } from "lucide-react";
+import { LayoutDashboard, CalendarCheck, BookOpenText, MessagesSquare, PanelLeftClose, PanelLeftOpen, Menu, X, Briefcase, Home, Settings } from "lucide-react";
 
 const NAV = [
   { to: "/", label: "Dashboard", icon: LayoutDashboard },
   { to: "/planner", label: "Task Planner", icon: CalendarCheck },
   { to: "/research", label: "Research", icon: BookOpenText },
   { to: "/chat", label: "Assistant", icon: MessagesSquare },
+  { to: "/settings", label: "Settings", icon: Settings },
 ] as const;
 
 export function AppShell({ children }: { children: ReactNode }) {
