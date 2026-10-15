@@ -1,12 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
-import { Sparkles as _unused } from "lucide-react";
 import { Wand2 } from "lucide-react";
 import { research, detectMode } from "@/lib/sim-ai";
 import { useLocal } from "@/lib/store";
 import { Disclaimer, EditableOutput, PageHeader } from "@/components/ui-bits";
 
-void _unused;
 
 export const Route = createFileRoute("/research")({
   head: () => ({
