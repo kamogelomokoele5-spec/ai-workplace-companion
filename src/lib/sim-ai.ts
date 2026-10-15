@@ -37,11 +37,12 @@ export function planWeek(tasks: Task[], weeklyHours: number): Schedule {
     let remaining = t.hours;
     const lastIdx = Math.min(4, Math.max(0, daysLeft(t.deadline) - 1));
     for (let i = 0; i < 5 && remaining > 0; i++) {
-      const free = cap - days[i].used;
+      const day = days[i]!;
+      const free = cap - day.used;
       if (free <= 0) continue;
       const h = Math.min(free, remaining);
-      days[i].blocks.push({ taskId: t.id, title: t.title, hours: h, priority: t.priority });
-      days[i].used += h;
+      day.blocks.push({ taskId: t.id, title: t.title, hours: h, priority: t.priority });
+      day.used += h;
       remaining -= h;
       if (i > lastIdx && remaining === 0) break;
     }
