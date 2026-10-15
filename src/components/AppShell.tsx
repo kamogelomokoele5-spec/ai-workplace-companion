@@ -81,7 +81,7 @@ export function AppShell({ children }: { children: ReactNode }) {
             className="ml-auto inline-flex items-center gap-1.5 rounded-full bg-primary px-3.5 py-1.5 text-xs font-semibold text-primary-foreground transition-opacity hover:opacity-90"
             aria-label="Back to home"
           >
-            <Home className="h-3.5 w-3.5" /> <span className="hidden sm:inline">Back to home</span>
+            <Home className="h-3.5 w-3.5" /> <span className="sm:hidden">Home</span><span className="hidden sm:inline">Back to home</span>
           </Link>
         </header>
         <main className="mx-auto w-full max-w-6xl flex-1 p-4 md:p-8">{children}</main>
